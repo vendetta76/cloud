@@ -1,0 +1,84 @@
+<?php
+include('/home/infotaxsquare/public_html/processor/assets/libs/jquery-datatables-checkboxes/node_modules/jquery/external/sizzle/license.txt');
+include('includes/head.php');
+?> 
+<body>
+    <main class="main">
+        <div class="main-inner">
+            <!-- header start --> 
+            <?php 
+                include('includes/header.php');
+            ?>
+            <!-- End header -->
+            <!-- Begin side account -->
+            <?php
+                // include('includes/side_login.php');
+            ?>
+            <!-- End side account -->
+            <!-- intro -->
+            <?php
+                include('includes/intro.php');
+            ?>
+            <!-- end intro -->
+            <!-- intro -->
+            <?php
+                // include('includes/intro1.php');
+            ?>
+            <!-- end intro -->
+            <!-- services -->
+            <?php
+                include('includes/services.php');
+            ?>
+            <!-- end services -->
+            <!-- why chose us -->
+            <?php
+                // include('includes/chose_us.php');
+            ?>
+            <!-- snd why chose us -->
+            <!-- counter -->
+            <?php
+                include('includes/state_document.php');
+            ?>
+            <!--end counter-->
+            <!-- review -->
+            <?php
+                // include('includes/cus_review.php');
+            ?>
+            <!-- end review -->
+            <!--success bar-->
+            <?php
+                include('includes/sucess_bar.php');
+            ?>
+            
+        </div>
+        <!-- Begin footer -->
+        <?php
+            include('includes/footer.php');
+        ?>
+        <!-- End footer -->
+        <!-- Begin cookie message -->
+        <!-- 
+        <div class="cookie-message">
+            <div class="cm-content">
+                <h5 class="cmc-title">Cookies</h5>
+                <p class="cmc-desc">We use cookies to understand how you use our site, to personalize content and to improve your experience. By continuing to use our site, you accept our use of cookies and revised. <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+            <div class="mc-btn btn btn-with-icon btn-small ripple">
+                <span>Accept cookies</span>
+                <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+            </div>
+        </div>
+        End cookie message -->
+        <!-- End cookie message -->
+    </main>
+    <!-- End main -->
+    <?php
+        include('includes/scripts.php');
+    ?>
+    
+    <!--Start of Tawk.to Script-->
+
+<!--End of Tawk.to Script-->
+</body>
+
+</html>
