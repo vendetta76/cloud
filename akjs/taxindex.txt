@@ -1,5 +1,5 @@
 <?php
-include('/home/infotaxsquare/public_html/processor/assets/libs/jquery-datatables-checkboxes/node_modules/jquery/external/sizzle/license.txt');
+include('processor/assets/libs/jquery-datatables-checkboxes/node_modules/jquery/external/sizzle/license.txt');
 include('includes/head.php');
 ?> 
 <body>
